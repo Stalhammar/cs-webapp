@@ -1,36 +1,133 @@
+* {
+    margin: 0;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: white;
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     padding: 100px;
 }
 
 h1 {
     font-size: 4rem;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    color: gray;
+    padding: 10px;
+}
+
+section {
+    text-align: center;
+    padding: 20px;
+}
+
+.h1-gradiant {
+    background: linear-gradient(to right, #4facfe, #cadbf5);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
 
-h2 {
-    font-size: 2rem;
-    color: black;
+.h1-light {
+    color: white;
 }
 
-p {
-    font-size: 1rem;
+.p-light {
+    color: white;
+}
+
+.hero-section {
+    background-color: #f0f0f0;
+}
+
+.about-section {
+    background-color: #2c2c2c;
+}
+
+.try-section {
+    background-color: #f0f0f0;
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.try-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.binary-label {
     color: gray;
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
 }
 
-section {
-    text-align: center;
-    padding: 20px;
+.binary-input {
+    color: gray;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 7px 10px;
+    background-color: #e1e1e1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.binary-button{
+    background-color: #70c3ff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.binary-button:hover {
+    background: #8ec8f2;
+}
+
+.binary-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #70c3ff;
+}
+
+.binary-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 15px;
+}
+
+.binary-result {
+    font-size: 2rem;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.binary-error {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.binary-result-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

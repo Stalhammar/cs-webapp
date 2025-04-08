@@ -9,14 +9,48 @@
   </head>
 
   <body>
-    <div>
+    <div class="hero-section">
         <header>
-            <h1>Welcome to cs-webapp!</h1>
+            <h1 class="h1-gradiant">Welcome to cs-webapp!</h1>
         </header>
         <section>
             <h2>Do you have interest in Computer Science?</h2>
             <p>Then you have come to the right place!</p>
         </section>
     </div>
+    <div class="about-section">
+        <section>
+            <h1 class="h1-light">What is cs-webapp?</h1>
+            <p class="p-light">cs-webap is a</p>
+        </section>
+    </div>
+    <div class="try-section">
+        <section class="try-card">
+            <h2>Try Binary!</h2>
+            <p>Computers think in 0s and 1s.</p>
+            <p>Each digit in a binary number represents a power of 2, starting from the right. <br />
+                Multiply each digit by 2 raised to the power of its position, starting at 0, then add them all together.
+            </p>
+            <p>For example, <code>1011</code> is:<br />
+                (1 &times 2<sup>3</sup>) +
+                (0 &times 2<sup>2</sup>) +
+                (1 &times 2<sup>1</sup>) +
+                (1 &times 2 <sup>0</sup>) = 
+                8 + 0 + 2 + 1 = 
+                <code>11</code>
+            </p>
+            <label class="binary-label" for="binaryInput">Try entering a binary number and we’ll convert it to decimal for you!</label>
+            <div class="binary-controls">
+                <input class="binary-input" type="text" id="binaryInput" name="binaryInput" />
+                <button class="binary-button" id="convertToBinary">Convert Binary</button>
+                <button class="binary-button" id="convertToDecimal">Convert Decimal</button>
+            </div >
+            <div class="binary-result-section">
+                <p id="binaryResult" class="binary-result"></p>
+                <p id="binaryError" class="binary-error"></p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
