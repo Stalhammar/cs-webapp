@@ -39,7 +39,7 @@ decimalButton.addEventListener("click", function() {
 
     // Check if input is a number
     if (!/^\d+$/.test(decimal)) {
-        error.textContent = "Please enter a valid numbe";
+        error.textContent = "Please enter a valid number";
         error.style.color = "red";
         return;
     }
@@ -49,3 +49,49 @@ decimalButton.addEventListener("click", function() {
     result.textContent = `${binary}`
     result.style.color = "#70c3ff";
 })
+
+const randomNumberDisplay = document.getElementById("randomNumber")
+let currentNumber = 0;
+
+/*
+Function that generates a random number between 1-100
+*/
+function generateRandomNumber() {
+    currentNumber = Math.floor(Math.random()*100) + 1;
+    randomNumberDisplay.textContent = currentNumber;
+}
+
+const numberInput = document.getElementById("numberInput")
+const numberResult = document.getElementById("numberResult")
+const numberError = document.getElementById("numberError")
+const checkNumberButton = document.getElementById("checkNumber")
+
+/*
+Button that checks if input is correct
+*/
+checkNumberButton.addEventListener("click", function() {
+
+    numberError.textContent = "";
+    numberResult.textContent = "";
+
+    const number = numberInput.value;
+    const amountBinary = Math.floor(Math.log2(currentNumber)) + 1;
+
+
+    // Check if input is a number
+    if (!/^\d+$/.test(number)) {
+        numberError.textContent = "Please enter a valid number";
+        numberError.style.color = "red";
+        return;
+    }
+
+    if (parseInt(number) === amountBinary) {
+        numberResult.textContent = "Correct!"
+        numberResult.style.color = "#70c3ff";
+    } else {
+        numberError.textContent = `Your guess is too ${parseInt(number) > amountBinary ? "high" : "low"}`;
+        numberError.style.color = "red"
+    }
+});
+
+generateRandomNumber();

@@ -39,15 +39,34 @@
                 8 + 0 + 2 + 1 = 
                 <code>11</code>
             </p>
-            <label class="binary-label" for="binaryInput">Try entering a binary number and we’ll convert it to decimal for you!</label>
+            <label class="binary-label" for="binaryInput">Try entering a binary number and we’ll convert it to decimal for you:</label>
             <div class="binary-controls">
                 <input class="binary-input" type="text" id="binaryInput" name="binaryInput" />
-                <button class="binary-button" id="convertToBinary">Convert Binary</button>
-                <button class="binary-button" id="convertToDecimal">Convert Decimal</button>
+                <button class="binary-button" id="convertToBinary">Convert To Decimal</button>
+                <button class="binary-button" id="convertToDecimal">Convert To Binary</button>
             </div >
             <div class="binary-result-section">
                 <p id="binaryResult" class="binary-result"></p>
                 <p id="binaryError" class="binary-error"></p>
+            </div>
+        </section>
+        <section class="try-card">
+            <h2>Guess the Bit Width!</h2>
+            <p>
+                Computers store numbers in binary — a system made up of only 1s and 0s.  
+                Each individual 1 or 0 is called a <strong>bit</strong>.  
+                The more bits you have, the larger the number you can represent.
+            </p>
+            <p>For example, the number <code>5</code> in binary is <code>101</code>, which takes <strong>3 bits</strong> to store.</p>
+            <p>Guess how many bits are needed to store the number <code id="randomNumber">?</code> in binary</p>
+            <label class="binary-label" for="numberInput">Enter your guess:</label>
+            <div class="binary-controls">
+                <input class="binary-input" type="text" id="numberInput" name="numberInput" />
+                <button class="binary-button" id="checkNumber">Check your guess</button>
+            </div >
+            <div class="binary-result-section">
+                <p id="numberResult" class="binary-result"></p>
+                <p id="numberError" class="binary-error"></p>
             </div>
         </section>
     </div>
